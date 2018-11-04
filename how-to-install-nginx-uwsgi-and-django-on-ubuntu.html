@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>How to install and configure Nginx, uWSGI and Django on Ubuntu?</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pypanta.github.io/theme/css/pygment.css"/>
+  <link rel="stylesheet" href="https://pypanta.github.io/theme/css/style.css"/>
+
+  <!-- So Firefox can bookmark->"abo this site" -->
+      <link href="feeds/all.atom.xml" rel="alternate" title="PyPanta" type="application/atom+xml">
+      <link href="feeds/all.rss.xml" rel="alternate" title="PyPanta" type="application/rss+xml">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+      <h1 id="sitename">PyPanta <span>Freelance Developer</span></h1>
+    <nav>
+      <ul class="unstyled-list">
+        <li><a href="/" title="Home">Home</a></li>
+        <li><a href="https://pypanta.github.io/pages/about.html" title="About">About</a></li>
+        <li><a href="https://pypanta.github.io/pages/contact.html" title="Contact">Contact</a></li>
+        <li><a href="#" title="Portfolio">Portfolio</a></li>
+      </ul>
+  </header><!-- End Header -->
+
+  <!-- Section Main Content -->
+  <section class="content">
+<article>
+  <div class="article-info-detail">
+    <h2>How to install and configure Nginx, uWSGI and Django on Ubuntu?</h2>
+    <small>Posted on: <time datetime="2013-04-24T00:00:00+02:00">24 04 2013</time>
+      by Panta in <a href="https://pypanta.github.io/category/howto.html">Howto</a></small>
+  </div>
+  <div class="article-content-detail">
+    <p><p>As a Python and Django developer, one of best and fastest ways to deploy my Web aplications is the combination of <a href="http://nginx.org/">Nginx</a>, the high-performance Web server and <a href="http://projects.unbit.it/uwsgi/">uWSGI</a>.</p>
+<p>In this tutorial, I'll describe you how to install and configure Nginx, uWSGI, VirtualENV and Django on Ubuntu.</p>
+<p>To install all required applications, open a Terminal and run the following command:</p>
+<div class="highlight"><pre><span></span>sudo apt-get install nginx uwsgi uwsgi-plugin-python python-virtualenv
+</pre></div>
+
+
+<p>After that, go to your projects directory and create Virtual Python Environment, for example:</p>
+<div class="highlight"><pre><span></span>cd ~/projects
+virtualenv venv
+</pre></div>
+
+
+<p>Activate him with a command:</p>
+<div class="highlight"><pre><span></span>source venv/bin/activate
+</pre></div>
+
+
+<p>To install Django, you can use <a href="http://www.pip-installer.org/en/latest/">pip</a> or easy_install tool, I more prefer pip:</p>
+<div class="highlight"><pre><span></span>pip install django
+</pre></div>
+
+
+<p>Create new Django project:</p>
+<div class="highlight"><pre><span></span>django-admin.py startproject mysite
+</pre></div>
+
+
+<p>Now, in <strong>/etc/nginx/sites-available</strong> directory, create new file called <strong>mysite.com</strong>:</p>
+<div class="highlight"><pre><span></span>sudo nano /etc/nginx/sites-available/mysite.com
+</pre></div>
+
+
+<p>And enter the following code in it:</p>
+<div class="highlight"><pre><span></span><span class="nt">server</span> <span class="p">{</span>
+  <span class="err">listen</span>  <span class="err">80</span><span class="p">;</span>
+  <span class="err">server_name</span> <span class="err">mysite.com</span> <span class="err">www.mysite.com</span><span class="p">;</span>
+  <span class="err">access_log</span> <span class="err">/var/log/nginx/mysite.com_access.log</span><span class="p">;</span>
+  <span class="err">error_log</span> <span class="err">/var/log/nginx/mysite.com_error.log</span><span class="p">;</span>
+
+  <span class="err">location</span> <span class="err">/</span> <span class="err">{</span>
+    <span class="err">uwsgi_pass</span>  <span class="n">unix</span><span class="p">:</span><span class="o">///</span><span class="n">tmp</span><span class="o">/</span><span class="n">mysite</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">sock</span><span class="p">;</span>
+    <span class="err">include</span>     <span class="err">uwsgi_params</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nt">location</span> <span class="o">/</span><span class="nt">media</span><span class="o">/</span>  <span class="p">{</span>
+    <span class="err">alias</span> <span class="err">/home/USER/projects/mysite/media/</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nt">location</span>  <span class="o">/</span><span class="nt">static</span><span class="o">/</span> <span class="p">{</span>
+    <span class="err">alias</span>  <span class="err">/home/USER/projects/mysite/static/</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>This is some basic Nginx configuration. For more, look at the <a href="http://nginx.org/en/docs/">Nginx documentation</a>.</p>
+<p>To activate it, you need to create a symbolic link for a file in <strong>/etc/nginx/sites-enabled/</strong>:</p>
+<div class="highlight"><pre><span></span>sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
+</pre></div>
+
+
+<p>Configuration files for uWSGI are stored in <strong>/etc/uwsgi/apps-available</strong>. In this directory create new file called <strong>mysite.com.ini</strong>:</p>
+<div class="highlight"><pre><span></span>sudo nano /etc/uwsgi/apps-available/mysite.com.ini
+</pre></div>
+
+
+<p>And enter the following code:</p>
+<div class="highlight"><pre><span></span><span class="k">[uwsgi]</span>
+<span class="na">vhost</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">plugins</span> <span class="o">=</span> <span class="s">python</span>
+<span class="na">socket</span> <span class="o">=</span> <span class="s">/tmp/mysite.com.sock</span>
+<span class="na">master</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">enable-threads</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">processes</span> <span class="o">=</span> <span class="s">2</span>
+<span class="na">wsgi-file</span> <span class="o">=</span> <span class="s">/home/USER/projects/mysite/mysite/wsgi.py</span>
+<span class="na">virtualenv</span> <span class="o">=</span> <span class="s">/home/USER/projects/venv</span>
+<span class="na">chdir</span> <span class="o">=</span> <span class="s">/home/USER/projects/mysite</span>
+<span class="na">touch-reload</span> <span class="o">=</span> <span class="s">/home/USER/projects/mysite/reload</span>
+</pre></div>
+
+
+<p>Enable it:</p>
+<div class="highlight"><pre><span></span>sudo ln-s /etc/uwsgi/apps-available/mysite.com.ini /etc/uwsgi/apps-enabled/
+</pre></div>
+
+
+<p>And to the end, restart a services:</p>
+<div class="highlight"><pre><span></span>sudo service nginx restart
+sudo service uwsgi restart
+</pre></div></p>
+
+      <div class="article-tags">
+        <i class="fas fa-tags"></i>
+          <small><a href="https://pypanta.github.io/tag/django.html" rel="tag">Django</a></small>
+          <small><a href="https://pypanta.github.io/tag/nginx.html" rel="tag">Nginx</a></small>
+          <small><a href="https://pypanta.github.io/tag/uwsgi.html" rel="tag">uWSGI</a></small>
+          <small><a href="https://pypanta.github.io/tag/ubuntu.html" rel="tag">Ubuntu</a></small>
+          <small><a href="https://pypanta.github.io/tag/linux.html" rel="tag">Linux</a></small>
+      </div>
+
+    <!-- DISQUS Comments -->
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://pypanta.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</article>
+  </section><!-- End Section -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="categories">
+      <h3>Categories</h3>
+      <ul class="unstyled-list">
+            <li class="active">
+              <a href="https://pypanta.github.io/category/howto.html" title="HowTo">HowTo</a>
+            </li>
+      </ul>
+      <ul class="unstyled-list">
+            <li >
+              <a href="https://pypanta.github.io/category/linux.html" title="Linux">Linux</a>
+            </li>
+      </ul>
+    </div>
+    <div class="social">
+      <ul class="unstyled-list">
+        <li><a href="https://pypanta.github.io/feeds/all.atom.xml" title="Atom Feed"><i class="fas fa-rss"></i></a></li>
+        <li><a href="" title="Google+"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a href="" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="" title="Github"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+    <small>Copy &copy;2018 PyPanta.</small>
+  </footer><!-- End Footer -->
+
+  <script>
+    var colors = ["#0d47a1", "#00695c", "#FF8800", "#3E4551", "#9933CC", "#3F729B", "#c62828"];
+
+    var sq = document.querySelectorAll('.article-info');
+
+    for (i=0; i < sq.length; i++) {
+      sq[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+    }
+  </script>
+
+  <script id="dsq-count-scr" src="//pypanta.disqus.com/count.js" async></script>
+</body>
+</html>

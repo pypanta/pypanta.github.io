@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>How to install Oracle Java on Fedora Linux</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pypanta.github.io/theme/css/pygment.css"/>
+  <link rel="stylesheet" href="https://pypanta.github.io/theme/css/style.css"/>
+
+  <!-- So Firefox can bookmark->"abo this site" -->
+      <link href="feeds/all.atom.xml" rel="alternate" title="PyPanta" type="application/atom+xml">
+      <link href="feeds/all.rss.xml" rel="alternate" title="PyPanta" type="application/rss+xml">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+      <h1 id="sitename">PyPanta <span>Freelance Developer</span></h1>
+    <nav>
+      <ul class="unstyled-list">
+        <li><a href="/" title="Home">Home</a></li>
+        <li><a href="https://pypanta.github.io/pages/about.html" title="About">About</a></li>
+        <li><a href="https://pypanta.github.io/pages/contact.html" title="Contact">Contact</a></li>
+        <li><a href="#" title="Portfolio">Portfolio</a></li>
+      </ul>
+  </header><!-- End Header -->
+
+  <!-- Section Main Content -->
+  <section class="content">
+<article>
+  <div class="article-info-detail">
+    <h2>How to install Oracle Java on Fedora Linux</h2>
+    <small>Posted on: <time datetime="2014-03-15T00:00:00+01:00">15 03 2014</time>
+      by Panta in <a href="https://pypanta.github.io/category/linux.html">Linux</a></small>
+  </div>
+  <div class="article-content-detail">
+    <p><p>To install Oracle Java on Fedora/CentOS Linux, open the Terminal and follow the
+next steps:</p>
+<p>First, change to root user:</p>
+<div class="highlight"><pre><span></span>su
+</pre></div>
+
+
+<p>or</p>
+<div class="highlight"><pre><span></span>sudo su
+</pre></div>
+
+
+<p>Next, Download Oracle Java <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">jdk</a>
+and
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html">jre</a> packages:</p>
+<p>For 32bit users:</p>
+<div class="highlight"><pre><span></span>wget -c --no-cookies --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.rpm&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-i586.rpm&quot;
+</pre></div>
+
+
+<p>For 64bit users:</p>
+<div class="highlight"><pre><span></span>wget -c --no-cookies --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.rpm&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-x64.rpm&quot;
+</pre></div>
+
+
+<p>Install downloaded packages:</p>
+<div class="highlight"><pre><span></span>yum -y install *.rpm
+</pre></div>
+
+
+<p>Set up java, javaws, libjavaplugin.so (Java plugin for Firefox) and javac:</p>
+<p>For 32bit users:</p>
+<div class="highlight"><pre><span></span>alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
+alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so libjavaplugin.so /usr/java/latest/jre/lib/i386/libnpjp2.so 200000
+alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
+alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+</pre></div>
+
+
+<p>For 64bit users:</p>
+<div class="highlight"><pre><span></span>alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
+alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/latest/jre/lib/amd64/libnpjp2.so 200000
+alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
+alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+</pre></div>
+
+
+<p>Check if Java is installed:</p>
+<div class="highlight"><pre><span></span>java -version
+</pre></div>
+
+
+<p>Also, I wrote <a href="https://dl.dropboxusercontent.com/u/9196683/Fedora/java-install.sh">this little bash script</a>
+that allows you to install Oracle Java with a single command in Terminal.
+All you need to do is to run a script as root user:</p>
+<div class="highlight"><pre><span></span>sh java-install.sh
+</pre></div></p>
+
+      <div class="article-tags">
+        <i class="fas fa-tags"></i>
+          <small><a href="https://pypanta.github.io/tag/linux.html" rel="tag">Linux</a></small>
+          <small><a href="https://pypanta.github.io/tag/fedora.html" rel="tag">Fedora</a></small>
+          <small><a href="https://pypanta.github.io/tag/java.html" rel="tag">Java</a></small>
+      </div>
+
+    <!-- DISQUS Comments -->
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://pypanta.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</article>
+  </section><!-- End Section -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="categories">
+      <h3>Categories</h3>
+      <ul class="unstyled-list">
+            <li >
+              <a href="https://pypanta.github.io/category/howto.html" title="HowTo">HowTo</a>
+            </li>
+      </ul>
+      <ul class="unstyled-list">
+            <li class="active">
+              <a href="https://pypanta.github.io/category/linux.html" title="Linux">Linux</a>
+            </li>
+      </ul>
+    </div>
+    <div class="social">
+      <ul class="unstyled-list">
+        <li><a href="https://pypanta.github.io/feeds/all.atom.xml" title="Atom Feed"><i class="fas fa-rss"></i></a></li>
+        <li><a href="" title="Google+"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a href="" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="" title="Github"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+    <small>Copy &copy;2018 PyPanta.</small>
+  </footer><!-- End Footer -->
+
+  <script>
+    var colors = ["#0d47a1", "#00695c", "#FF8800", "#3E4551", "#9933CC", "#3F729B", "#c62828"];
+
+    var sq = document.querySelectorAll('.article-info');
+
+    for (i=0; i < sq.length; i++) {
+      sq[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+    }
+  </script>
+
+  <script id="dsq-count-scr" src="//pypanta.disqus.com/count.js" async></script>
+</body>
+</html>
