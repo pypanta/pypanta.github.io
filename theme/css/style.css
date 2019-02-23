@@ -108,7 +108,8 @@ pre {
 header {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  align-items: center;
+  padding: 1em .5em;
   background-color: #3F729B;
 }
 
@@ -139,8 +140,9 @@ nav ul {
 
 nav ul li {
   list-style: none;
-  margin: .4em;
 }
+
+nav ul li:nth-child(-n+3) { margin-right: .4em; }
 
 nav a {
   font-size: .8em;
