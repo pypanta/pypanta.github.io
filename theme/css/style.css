@@ -107,7 +107,8 @@ pre {
 /* ------------------ */
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 1em .5em;
   background-color: #3F729B;
@@ -279,8 +280,6 @@ footer small {
 
   header {
     grid-area: h;
-    flex-flow: row wrap;
-    justify-content: space-between;
   }
 
   section {
@@ -343,6 +342,8 @@ footer small {
 }
 
 @media (max-width: 960px) {
+  header { flex-direction: column; }
+  #sitename { margin-bottom: .4em; }
   #sitename p { display: none; }
 }
 
