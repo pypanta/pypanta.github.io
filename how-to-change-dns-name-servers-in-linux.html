@@ -39,24 +39,24 @@
   </div>
   <div class="article-content-detail">
     <p><p>The file to change DNS nameservers in Linux is <strong>/etc/resolv.conf</strong>:</p>
-<div class="highlight"><pre><span></span>cat /etc/resolv.conf
+<div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="p">.</span><span class="n">conf</span>
 </pre></div>
 
 
 <p>For example, if you want to set up <a href="http://code.google.com/speed/public-dns/">Google public DNS</a>, open the file:</p>
-<div class="highlight"><pre><span></span>sudo nano /etc/resolv.conf
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="p">.</span><span class="n">conf</span>
 </pre></div>
 
 
 <p>And add the following lines:</p>
-<div class="highlight"><pre><span></span>nameserver 8.8.8.8
-nameserver 8.8.4.4
+<div class="highlight"><pre><span></span><span class="n">nameserver</span> <span class="mi">8</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">8</span>
+<span class="n">nameserver</span> <span class="mi">8</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">4</span>
 </pre></div>
 
 
 <p>Save the changes with <em>Ctrl+O</em> and Enter, then <em>Ctrl+X</em> to exit from nano editor.</p>
 <p>Restart the network:</p>
-<div class="highlight"><pre><span></span>sudo /etc/init.d/networking restart
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">networking</span> <span class="k">restart</span>
 </pre></div>
 
 

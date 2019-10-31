@@ -41,12 +41,12 @@
     <p><p>To install Oracle Java on Fedora/CentOS Linux, open the Terminal and follow the
 next steps:</p>
 <p>First, change to root user:</p>
-<div class="highlight"><pre><span></span>su
+<div class="highlight"><pre><span></span><span class="n">su</span>
 </pre></div>
 
 
 <p>or</p>
-<div class="highlight"><pre><span></span>sudo su
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">su</span>
 </pre></div>
 
 
@@ -54,48 +54,48 @@ next steps:</p>
 and
 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html">jre</a> packages:</p>
 <p>For 32bit users:</p>
-<div class="highlight"><pre><span></span>wget -c --no-cookies --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.rpm&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-i586.rpm&quot;
+<div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="k">c</span> <span class="c1">--no-cookies --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.rpm&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-i586.rpm&quot;</span>
 </pre></div>
 
 
 <p>For 64bit users:</p>
-<div class="highlight"><pre><span></span>wget -c --no-cookies --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.rpm&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-x64.rpm&quot;
+<div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="k">c</span> <span class="c1">--no-cookies --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.rpm&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-x64.rpm&quot;</span>
 </pre></div>
 
 
 <p>Install downloaded packages:</p>
-<div class="highlight"><pre><span></span>yum -y install *.rpm
+<div class="highlight"><pre><span></span><span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="o">*</span><span class="p">.</span><span class="n">rpm</span>
 </pre></div>
 
 
 <p>Set up java, javaws, libjavaplugin.so (Java plugin for Firefox) and javac:</p>
 <p>For 32bit users:</p>
-<div class="highlight"><pre><span></span>alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
-alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
-alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so libjavaplugin.so /usr/java/latest/jre/lib/i386/libnpjp2.so 200000
-alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
-alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+<div class="highlight"><pre><span></span><span class="n">alternatives</span> <span class="c1">--install /usr/bin/java java /usr/java/latest/jre/bin/java 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/lib/mozilla/plugins/libjavaplugin.so libjavaplugin.so /usr/java/latest/jre/lib/i386/libnpjp2.so 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/bin/javac javac /usr/java/latest/bin/javac 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/bin/jar jar /usr/java/latest/bin/jar 200000</span>
 </pre></div>
 
 
 <p>For 64bit users:</p>
-<div class="highlight"><pre><span></span>alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
-alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
-alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/latest/jre/lib/amd64/libnpjp2.so 200000
-alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
-alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+<div class="highlight"><pre><span></span><span class="n">alternatives</span> <span class="c1">--install /usr/bin/java java /usr/java/latest/jre/bin/java 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/latest/jre/lib/amd64/libnpjp2.so 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/bin/javac javac /usr/java/latest/bin/javac 200000</span>
+<span class="n">alternatives</span> <span class="c1">--install /usr/bin/jar jar /usr/java/latest/bin/jar 200000</span>
 </pre></div>
 
 
 <p>Check if Java is installed:</p>
-<div class="highlight"><pre><span></span>java -version
+<div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="k">version</span>
 </pre></div>
 
 
 <p>Also, I wrote <a href="https://dl.dropboxusercontent.com/u/9196683/Fedora/java-install.sh">this little bash script</a>
 that allows you to install Oracle Java with a single command in Terminal.
 All you need to do is to run a script as root user:</p>
-<div class="highlight"><pre><span></span>sh java-install.sh
+<div class="highlight"><pre><span></span><span class="n">sh</span> <span class="n">java</span><span class="o">-</span><span class="n">install</span><span class="p">.</span><span class="n">sh</span>
 </pre></div></p>
 
       <div class="article-tags">

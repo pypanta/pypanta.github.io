@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>PyPanta</title><link href="https://pypanta.github.io/" rel="alternate"></link><link href="https://pypanta.github.io/feeds/all.atom.xml" rel="self"></link><id>https://pypanta.github.io/</id><updated>2014-07-06T00:00:00+02:00</updated><entry><title>How to remove items from Places sidebar in Nautilus file manager?</title><link href="https://pypanta.github.io/how-to-remove-items-from-places-sidebar-in-nautilus.html" rel="alternate"></link><published>2014-07-06T00:00:00+02:00</published><updated>2014-07-06T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2014-07-06:/how-to-remove-items-from-places-sidebar-in-nautilus.html</id><summary type="html">&lt;p&gt;To remove items from places sidebar in Nautilus, open the &lt;strong&gt;~/.config/user-dirs.dirs&lt;/strong&gt; file and remove lines that refer to items you don't want.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;XDG_DESKTOP_DIR=&amp;quot;$HOME/Desktop&amp;quot;
-XDG_DOWNLOAD_DIR=&amp;quot;$HOME/Downloads …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;To remove items from places sidebar in Nautilus, open the &lt;strong&gt;~/.config/user-dirs.dirs&lt;/strong&gt; file and remove lines that refer to items you don't want.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;XDG_DESKTOP_DIR=&amp;quot;$HOME/Desktop&amp;quot;
-XDG_DOWNLOAD_DIR=&amp;quot;$HOME/Downloads&amp;quot;
-XDG_PUBLICSHARE_DIR=&amp;quot;$HOME/Public&amp;quot;
-XDG_DOCUMENTS_DIR=&amp;quot;$HOME/Documents&amp;quot;
-XDG_MUSIC_DIR=&amp;quot;$HOME/Music&amp;quot;
-XDG_VIDEOS_DIR=&amp;quot;$HOME/Videos&amp;quot;
-XDG_PICTURES_DIR=&amp;quot;$HOME/Pictures&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;XDG_DESKTOP_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Desktop&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;XDG_DOWNLOAD_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Downloads …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;To remove items from places sidebar in Nautilus, open the &lt;strong&gt;~/.config/user-dirs.dirs&lt;/strong&gt; file and remove lines that refer to items you don't want.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;XDG_DESKTOP_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Desktop&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;XDG_DOWNLOAD_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Downloads&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;XDG_PUBLICSHARE_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Public&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;XDG_DOCUMENTS_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Documents&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;XDG_MUSIC_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Music&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;XDG_VIDEOS_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Videos&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;XDG_PICTURES_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$HOME/Pictures&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;To make these changes permanent, run the following command in your terminal:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;enabled=false&amp;quot; &amp;gt; ~/.config/user-dirs.conf
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Nautilus"></category><category term="Gnome"></category><category term="Linux"></category></entry><entry><title>How to install Oracle Java 8 on Linux</title><link href="https://pypanta.github.io/how-to-install-oracle-java8-on-linux.html" rel="alternate"></link><published>2014-03-23T00:00:00+01:00</published><updated>2014-03-23T00:00:00+01:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2014-03-23:/how-to-install-oracle-java8-on-linux.html</id><summary type="html">&lt;p&gt;Recently I wrote a post &lt;a href="/how-to-install-oracle-java-on-fedora-linux.html"&gt;How to install Oracle Java on Fedora Linux&lt;/a&gt;.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;enabled=false&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;user&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dirs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="Nautilus"></category><category term="Gnome"></category><category term="Linux"></category></entry><entry><title>How to install Oracle Java 8 on Linux</title><link href="https://pypanta.github.io/how-to-install-oracle-java8-on-linux.html" rel="alternate"></link><published>2014-03-23T00:00:00+01:00</published><updated>2014-03-23T00:00:00+01:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2014-03-23:/how-to-install-oracle-java8-on-linux.html</id><summary type="html">&lt;p&gt;Recently I wrote a post &lt;a href="/how-to-install-oracle-java-on-fedora-linux.html"&gt;How to install Oracle Java on Fedora Linux&lt;/a&gt;.
 In this tutorial I will explain you how to install the latest version of Oracle Java on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently I wrote a post &lt;a href="/how-to-install-oracle-java-on-fedora-linux.html"&gt;How to install Oracle Java on Fedora Linux&lt;/a&gt;.
 In this tutorial I will explain you how to install the latest version of Oracle Java on Linux systems.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"&gt;Download Java
 8&lt;/a&gt;
 from Oracle's website:&lt;/p&gt;
 &lt;p&gt;For 32bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget --no-check-certificate --no-cookies - --header &amp;quot;Cookie: oraclelicense=accept-securebackup-cookie&amp;quot; http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-i586.tar.gz
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="c1"&gt;--no-check-certificate --no-cookies - --header &amp;quot;Cookie: oraclelicense=accept-securebackup-cookie&amp;quot; http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-i586.tar.gz&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For 64bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget --no-check-certificate --no-cookies - --header &amp;quot;Cookie: oraclelicense=accept-securebackup-cookie&amp;quot; http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz&amp;lt;/code&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="c1"&gt;--no-check-certificate --no-cookies - --header &amp;quot;Cookie: oraclelicense=accept-securebackup-cookie&amp;quot; http://download.oracle.com/otn-pub/java/jdk/8-b132/jdk-8-linux-x64.tar.gz&amp;lt;/code&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Unpack the downloaded jdk archive in &lt;strong&gt;/opt/java&lt;/strong&gt; directory:&lt;/p&gt;
 &lt;p&gt;For 32bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir /opt/java
-tar xzvf jdk-8-linux-i586.tar.gz -C /opt/java
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt;
+&lt;span class="n"&gt;tar&lt;/span&gt; &lt;span class="n"&gt;xzvf&lt;/span&gt; &lt;span class="n"&gt;jdk&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i586&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;C&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For 64bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir /opt/java
-tar xzvf jdk-8-linux-x64.tar.gz -C /opt/java
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt;
+&lt;span class="n"&gt;tar&lt;/span&gt; &lt;span class="n"&gt;xzvf&lt;/span&gt; &lt;span class="n"&gt;jdk&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x64&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;C&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -65,33 +65,33 @@ update-alternatives --install /usr/bin/jar jar &lt;span class="cp"&gt;${&lt;/spa
 
 
 &lt;p&gt;Choose which Java will be used as default:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;update-alternatives --config java
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--config java&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Check which Java version is in use:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;java -version
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="Java"></category></entry><entry><title>How to install Oracle Java on Fedora Linux</title><link href="https://pypanta.github.io/how-to-install-oracle-java-on-fedora-linux.html" rel="alternate"></link><published>2014-03-15T00:00:00+01:00</published><updated>2014-03-15T00:00:00+01:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2014-03-15:/how-to-install-oracle-java-on-fedora-linux.html</id><summary type="html">&lt;p&gt;To install Oracle Java on Fedora/CentOS Linux, open the Terminal and follow the
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;version&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="Linux"></category><category term="Java"></category></entry><entry><title>How to install Oracle Java on Fedora Linux</title><link href="https://pypanta.github.io/how-to-install-oracle-java-on-fedora-linux.html" rel="alternate"></link><published>2014-03-15T00:00:00+01:00</published><updated>2014-03-15T00:00:00+01:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2014-03-15:/how-to-install-oracle-java-on-fedora-linux.html</id><summary type="html">&lt;p&gt;To install Oracle Java on Fedora/CentOS Linux, open the Terminal and follow the
 next steps:&lt;/p&gt;
 &lt;p&gt;First, change to root user:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;su
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;su&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo su
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;su&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Next, Download Oracle Java &lt;a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html"&gt;jdk …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;To install Oracle Java on Fedora/CentOS Linux, open the Terminal and follow the
 next steps:&lt;/p&gt;
 &lt;p&gt;First, change to root user:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;su
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;su&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo su
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;su&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -99,126 +99,128 @@ next steps:&lt;/p&gt;
 and
 &lt;a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html"&gt;jre&lt;/a&gt; packages:&lt;/p&gt;
 &lt;p&gt;For 32bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -c --no-cookies --header &amp;quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.rpm&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-i586.rpm&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;c&lt;/span&gt; &lt;span class="c1"&gt;--no-cookies --header &amp;quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-i586.rpm&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-i586.rpm&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For 64bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -c --no-cookies --header &amp;quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.rpm&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-x64.rpm&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;c&lt;/span&gt; &lt;span class="c1"&gt;--no-cookies --header &amp;quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.rpm&amp;quot; &amp;quot;http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-x64.rpm&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Install downloaded packages:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum -y install *.rpm
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;yum&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rpm&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Set up java, javaws, libjavaplugin.so (Java plugin for Firefox) and javac:&lt;/p&gt;
 &lt;p&gt;For 32bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
-alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
-alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so libjavaplugin.so /usr/java/latest/jre/lib/i386/libnpjp2.so 200000
-alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
-alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/java java /usr/java/latest/jre/bin/java 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/lib/mozilla/plugins/libjavaplugin.so libjavaplugin.so /usr/java/latest/jre/lib/i386/libnpjp2.so 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/javac javac /usr/java/latest/bin/javac 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/jar jar /usr/java/latest/bin/jar 200000&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For 64bit users:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
-alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
-alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/latest/jre/lib/amd64/libnpjp2.so 200000
-alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
-alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/java java /usr/java/latest/jre/bin/java 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/latest/jre/lib/amd64/libnpjp2.so 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/javac javac /usr/java/latest/bin/javac 200000&lt;/span&gt;
+&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/jar jar /usr/java/latest/bin/jar 200000&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Check if Java is installed:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;java -version
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;java&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;version&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Also, I wrote &lt;a href="https://dl.dropboxusercontent.com/u/9196683/Fedora/java-install.sh"&gt;this little bash script&lt;/a&gt;
 that allows you to install Oracle Java with a single command in Terminal.
 All you need to do is to run a script as root user:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sh java-install.sh
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="Fedora"></category><category term="Java"></category></entry><entry><title>How to resize a VirtualBox disk image?</title><link href="https://pypanta.github.io/how-to-resize-virtualbox-disk-image.html" rel="alternate"></link><published>2013-08-29T00:00:00+02:00</published><updated>2013-08-29T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2013-08-29:/how-to-resize-virtualbox-disk-image.html</id><summary type="html">&lt;p&gt;To resize a VirtualBox disk image (VDI), go to the directory where the .vdi file
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="Linux"></category><category term="Fedora"></category><category term="Java"></category></entry><entry><title>How to resize a VirtualBox disk image?</title><link href="https://pypanta.github.io/how-to-resize-virtualbox-disk-image.html" rel="alternate"></link><published>2013-08-29T00:00:00+02:00</published><updated>2013-08-29T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2013-08-29:/how-to-resize-virtualbox-disk-image.html</id><summary type="html">&lt;p&gt;To resize a VirtualBox disk image (VDI), go to the directory where the .vdi file
 is located, it's usually in &lt;strong&gt;~/VirtualBox VMs&lt;/strong&gt;, and run the following command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;VBoxManage modifyhd file …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;To resize a VirtualBox disk image (VDI), go to the directory where the .vdi file
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;VBoxManage&lt;/span&gt; &lt;span class="n"&gt;modifyhd&lt;/span&gt; &lt;span class="n"&gt;file …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;To resize a VirtualBox disk image (VDI), go to the directory where the .vdi file
 is located, it's usually in &lt;strong&gt;~/VirtualBox VMs&lt;/strong&gt;, and run the following command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;VBoxManage modifyhd file.vdi --resize SizeInMB
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;VBoxManage&lt;/span&gt; &lt;span class="n"&gt;modifyhd&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;vdi&lt;/span&gt; &lt;span class="c1"&gt;--resize SizeInMB&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;VBoxManage modifyhd Ubuntu.vdi --resize 20000
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;VBoxManage&lt;/span&gt; &lt;span class="n"&gt;modifyhd&lt;/span&gt; &lt;span class="n"&gt;Ubuntu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;vdi&lt;/span&gt; &lt;span class="c1"&gt;--resize 20000&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The command will resize VDI to 20 GB, or more precisely 19.53 GB.&lt;/p&gt;</content><category term="VirtualBox"></category></entry><entry><title>How to install and configure Nginx, uWSGI and Django on Ubuntu?</title><link href="https://pypanta.github.io/how-to-install-nginx-uwsgi-and-django-on-ubuntu.html" rel="alternate"></link><published>2013-04-24T00:00:00+02:00</published><updated>2013-04-24T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2013-04-24:/how-to-install-nginx-uwsgi-and-django-on-ubuntu.html</id><summary type="html">&lt;p&gt;As a Python and Django developer, one of best and fastest ways to deploy my Web aplications is the combination of &lt;a href="http://nginx.org/"&gt;Nginx&lt;/a&gt;, the high-performance Web server and &lt;a href="http://projects.unbit.it/uwsgi/"&gt;uWSGI&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In this …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As a Python and Django developer, one of best and fastest ways to deploy my Web aplications is the combination of &lt;a href="http://nginx.org/"&gt;Nginx&lt;/a&gt;, the high-performance Web server and &lt;a href="http://projects.unbit.it/uwsgi/"&gt;uWSGI&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In this tutorial, I'll describe you how to install and configure Nginx, uWSGI, VirtualENV and Django on Ubuntu.&lt;/p&gt;
+&lt;p&gt;The command will resize VDI to 20 GB, or more precisely 19.53 GB.&lt;/p&gt;</content><category term="HowTo"></category><category term="VirtualBox"></category></entry><entry><title>How to install and configure Nginx, uWSGI and Django on Ubuntu?</title><link href="https://pypanta.github.io/how-to-install-nginx-uwsgi-and-django-on-ubuntu.html" rel="alternate"></link><published>2013-04-24T00:00:00+02:00</published><updated>2013-04-24T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2013-04-24:/how-to-install-nginx-uwsgi-and-django-on-ubuntu.html</id><summary type="html">&lt;p&gt;As a Python and Django developer, one of best and fastest ways to deploy my Web aplications is the combination of the
+&lt;a href="http://nginx.org/"&gt;Nginx&lt;/a&gt;, the high-performance Web server, and &lt;a href="http://projects.unbit.it/uwsgi/"&gt;uWSGI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As a Python and Django developer, one of best and fastest ways to deploy my Web aplications is the combination of the
+&lt;a href="http://nginx.org/"&gt;Nginx&lt;/a&gt;, the high-performance Web server, and &lt;a href="http://projects.unbit.it/uwsgi/"&gt;uWSGI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this tutorial, I'll show you how to install and configure Nginx, uWSGI, VirtualENV and Django on Ubuntu.&lt;/p&gt;
 &lt;p&gt;To install all required applications, open a Terminal and run the following command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install nginx uwsgi uwsgi-plugin-python python-virtualenv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;nginx&lt;/span&gt; &lt;span class="n"&gt;uwsgi&lt;/span&gt; &lt;span class="n"&gt;uwsgi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;plugin&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;virtualenv&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;After that, go to your projects directory and create Virtual Python Environment, for example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd ~/projects
-virtualenv venv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;projects&lt;/span&gt;
+&lt;span class="n"&gt;virtualenv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Activate him with a command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;source venv/bin/activate
+&lt;p&gt;Activate it with a command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;To install Django, you can use &lt;a href="http://www.pip-installer.org/en/latest/"&gt;pip&lt;/a&gt; or easy_install tool, I more prefer pip:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install django
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;django&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Create new Django project:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;django-admin.py startproject mysite
+&lt;p&gt;Create a new Django project:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;django&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;admin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;startproject&lt;/span&gt; &lt;span class="n"&gt;mysite&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Now, in &lt;strong&gt;/etc/nginx/sites-available&lt;/strong&gt; directory, create new file called &lt;strong&gt;mysite.com&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo nano /etc/nginx/sites-available/mysite.com
+&lt;p&gt;Now, in &lt;strong&gt;/etc/nginx/sites-available&lt;/strong&gt; directory, create a new file called &lt;strong&gt;mysite.com&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;nano&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sites&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mysite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;And enter the following code in it:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="err"&gt;listen&lt;/span&gt;  &lt;span class="err"&gt;80&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="err"&gt;server_name&lt;/span&gt; &lt;span class="err"&gt;mysite.com&lt;/span&gt; &lt;span class="err"&gt;www.mysite.com&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="err"&gt;access_log&lt;/span&gt; &lt;span class="err"&gt;/var/log/nginx/mysite.com_access.log&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="err"&gt;error_log&lt;/span&gt; &lt;span class="err"&gt;/var/log/nginx/mysite.com_error.log&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;server&lt;/span&gt; {
+  &lt;span class="nv"&gt;listen&lt;/span&gt;  &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+  &lt;span class="nv"&gt;server_name&lt;/span&gt; &lt;span class="nv"&gt;mysite&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt; &lt;span class="nv"&gt;www&lt;/span&gt;.&lt;span class="nv"&gt;mysite&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+  &lt;span class="nv"&gt;access_log&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;log&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;mysite&lt;/span&gt;.&lt;span class="nv"&gt;com_access&lt;/span&gt;.&lt;span class="nv"&gt;log&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+  &lt;span class="nv"&gt;error_log&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;log&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;mysite&lt;/span&gt;.&lt;span class="nv"&gt;com_error&lt;/span&gt;.&lt;span class="nv"&gt;log&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
 
-  &lt;span class="err"&gt;location&lt;/span&gt; &lt;span class="err"&gt;/&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="err"&gt;uwsgi_pass&lt;/span&gt;  &lt;span class="n"&gt;unix&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;///&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mysite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sock&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="err"&gt;include&lt;/span&gt;     &lt;span class="err"&gt;uwsgi_params&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nv"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; {
+    &lt;span class="nv"&gt;uwsgi_pass&lt;/span&gt;  &lt;span class="nv"&gt;unix&lt;/span&gt;:&lt;span class="o"&gt;///&lt;/span&gt;&lt;span class="nv"&gt;tmp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;mysite&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;.&lt;span class="nv"&gt;sock&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;include&lt;/span&gt;     &lt;span class="nv"&gt;uwsgi_params&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+  }
 
-  &lt;span class="nt"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;media&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;  &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="err"&gt;alias&lt;/span&gt; &lt;span class="err"&gt;/home/USER/projects/mysite/media/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nv"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;media&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;  {
+    &lt;span class="nv"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;USER&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;projects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;mysite&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;media&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+  }
 
-  &lt;span class="nt"&gt;location&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="err"&gt;alias&lt;/span&gt;  &lt;span class="err"&gt;/home/USER/projects/mysite/static/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="nv"&gt;location&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; {
+    &lt;span class="nv"&gt;alias&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;USER&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;projects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;mysite&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+  }
+}
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;This is some basic Nginx configuration. For more, look at the &lt;a href="http://nginx.org/en/docs/"&gt;Nginx documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To activate it, you need to create a symbolic link for a file in &lt;strong&gt;/etc/nginx/sites-enabled/&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;ln&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sites&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mysite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sites&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Configuration files for uWSGI are stored in &lt;strong&gt;/etc/uwsgi/apps-available&lt;/strong&gt;. In this directory create new file called &lt;strong&gt;mysite.com.ini&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo nano /etc/uwsgi/apps-available/mysite.com.ini
+&lt;p&gt;Configuration files for uWSGI are stored in &lt;strong&gt;/etc/uwsgi/apps-available&lt;/strong&gt;. In this directory create a new file called &lt;strong&gt;mysite.com.ini&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;nano&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;uwsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mysite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ini&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -238,39 +240,39 @@ virtualenv venv
 
 
 &lt;p&gt;Enable it:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo ln-s /etc/uwsgi/apps-available/mysite.com.ini /etc/uwsgi/apps-enabled/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;ln&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;uwsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mysite&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ini&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;uwsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And to the end, restart a services:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo service nginx restart
-sudo service uwsgi restart
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Django"></category><category term="Nginx"></category><category term="uWSGI"></category><category term="Ubuntu"></category><category term="Linux"></category></entry><entry><title>How to change DNS Name Servers in Linux?</title><link href="https://pypanta.github.io/how-to-change-dns-name-servers-in-linux.html" rel="alternate"></link><published>2013-04-23T00:00:00+02:00</published><updated>2013-04-23T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2013-04-23:/how-to-change-dns-name-servers-in-linux.html</id><summary type="html">&lt;p&gt;The file to change DNS nameservers in Linux is &lt;strong&gt;/etc/resolv.conf&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat /etc/resolv.conf
+&lt;p&gt;And on the end, restart &lt;em&gt;nginx&lt;/em&gt; and &lt;em&gt;uwsgi&lt;/em&gt; services:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt; &lt;span class="n"&gt;nginx&lt;/span&gt; &lt;span class="k"&gt;restart&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt; &lt;span class="n"&gt;uwsgi&lt;/span&gt; &lt;span class="k"&gt;restart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Howto"></category><category term="Django"></category><category term="Nginx"></category><category term="uWSGI"></category><category term="Ubuntu"></category><category term="Linux"></category></entry><entry><title>How to change DNS Name Servers in Linux?</title><link href="https://pypanta.github.io/how-to-change-dns-name-servers-in-linux.html" rel="alternate"></link><published>2013-04-23T00:00:00+02:00</published><updated>2013-04-23T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2013-04-23:/how-to-change-dns-name-servers-in-linux.html</id><summary type="html">&lt;p&gt;The file to change DNS nameservers in Linux is &lt;strong&gt;/etc/resolv.conf&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;resolv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For example, if you want to set up &lt;a href="http://code.google.com/speed/public-dns/"&gt;Google public DNS&lt;/a&gt;, open the file …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The file to change DNS nameservers in Linux is &lt;strong&gt;/etc/resolv.conf&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat /etc/resolv.conf
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;resolv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For example, if you want to set up &lt;a href="http://code.google.com/speed/public-dns/"&gt;Google public DNS&lt;/a&gt;, open the file:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo nano /etc/resolv.conf
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;nano&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;resolv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;And add the following lines:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nameserver 8.8.8.8
-nameserver 8.8.4.4
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;nameserver&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;
+&lt;span class="n"&gt;nameserver&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Save the changes with &lt;em&gt;Ctrl+O&lt;/em&gt; and Enter, then &lt;em&gt;Ctrl+X&lt;/em&gt; to exit from nano editor.&lt;/p&gt;
 &lt;p&gt;Restart the network:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo /etc/init.d/networking restart
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;networking&lt;/span&gt; &lt;span class="k"&gt;restart&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Or, in Network Manager, go to &lt;em&gt;Edit-&amp;gt;IPv4 Settings&lt;/em&gt; tab, choose &lt;em&gt;Automatic
-(DHCP) addresses only&lt;/em&gt; and add DNS IP addresses.&lt;/p&gt;</content><category term="Linux"></category><category term="DNS"></category></entry></feed>
+(DHCP) addresses only&lt;/em&gt; and add DNS IP addresses.&lt;/p&gt;</content><category term="Linux"></category><category term="Linux"></category><category term="DNS"></category></entry></feed>
