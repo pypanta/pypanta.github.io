@@ -41,67 +41,67 @@
     <p><p>As a Python and Django developer, one of best and fastest ways to deploy my Web aplications is the combination of <a href="http://nginx.org/">Nginx</a>, the high-performance Web server and <a href="http://projects.unbit.it/uwsgi/">uWSGI</a>.</p>
 <p>In this tutorial, I'll describe you how to install and configure Nginx, uWSGI, VirtualENV and Django on Ubuntu.</p>
 <p>To install all required applications, open a Terminal and run the following command:</p>
-<div class="highlight"><pre><span></span>sudo apt-get install nginx uwsgi uwsgi-plugin-python python-virtualenv
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="n">nginx</span> <span class="n">uwsgi</span> <span class="n">uwsgi</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">python</span> <span class="n">python</span><span class="o">-</span><span class="n">virtualenv</span>
 </pre></div>
 
 
 <p>After that, go to your projects directory and create Virtual Python Environment, for example:</p>
-<div class="highlight"><pre><span></span>cd ~/projects
-virtualenv venv
+<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">projects</span>
+<span class="n">virtualenv</span> <span class="n">venv</span>
 </pre></div>
 
 
-<p>Activate him with a command:</p>
-<div class="highlight"><pre><span></span>source venv/bin/activate
+<p>Activate it with a command:</p>
+<div class="highlight"><pre><span></span><span class="k">source</span> <span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
 </pre></div>
 
 
 <p>To install Django, you can use <a href="http://www.pip-installer.org/en/latest/">pip</a> or easy_install tool, I more prefer pip:</p>
-<div class="highlight"><pre><span></span>pip install django
+<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">django</span>
 </pre></div>
 
 
-<p>Create new Django project:</p>
-<div class="highlight"><pre><span></span>django-admin.py startproject mysite
+<p>Create a new Django project:</p>
+<div class="highlight"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="k">admin</span><span class="p">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="n">mysite</span>
 </pre></div>
 
 
-<p>Now, in <strong>/etc/nginx/sites-available</strong> directory, create new file called <strong>mysite.com</strong>:</p>
-<div class="highlight"><pre><span></span>sudo nano /etc/nginx/sites-available/mysite.com
+<p>Now, in <strong>/etc/nginx/sites-available</strong> directory, create a new file called <strong>mysite.com</strong>:</p>
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sites</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mysite</span><span class="p">.</span><span class="n">com</span>
 </pre></div>
 
 
 <p>And enter the following code in it:</p>
-<div class="highlight"><pre><span></span><span class="nt">server</span> <span class="p">{</span>
-  <span class="err">listen</span>  <span class="err">80</span><span class="p">;</span>
-  <span class="err">server_name</span> <span class="err">mysite.com</span> <span class="err">www.mysite.com</span><span class="p">;</span>
-  <span class="err">access_log</span> <span class="err">/var/log/nginx/mysite.com_access.log</span><span class="p">;</span>
-  <span class="err">error_log</span> <span class="err">/var/log/nginx/mysite.com_error.log</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="nv">server</span> {
+  <span class="nv">listen</span>  <span class="mi">80</span><span class="c1">;</span>
+  <span class="nv">server_name</span> <span class="nv">mysite</span>.<span class="nv">com</span> <span class="nv">www</span>.<span class="nv">mysite</span>.<span class="nv">com</span><span class="c1">;</span>
+  <span class="nv">access_log</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">mysite</span>.<span class="nv">com_access</span>.<span class="nv">log</span><span class="c1">;</span>
+  <span class="nv">error_log</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">mysite</span>.<span class="nv">com_error</span>.<span class="nv">log</span><span class="c1">;</span>
 
-  <span class="err">location</span> <span class="err">/</span> <span class="err">{</span>
-    <span class="err">uwsgi_pass</span>  <span class="n">unix</span><span class="p">:</span><span class="o">///</span><span class="n">tmp</span><span class="o">/</span><span class="n">mysite</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">sock</span><span class="p">;</span>
-    <span class="err">include</span>     <span class="err">uwsgi_params</span><span class="p">;</span>
-  <span class="p">}</span>
+  <span class="nv">location</span> <span class="o">/</span> {
+    <span class="nv">uwsgi_pass</span>  <span class="nv">unix</span>:<span class="o">///</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">mysite</span>.<span class="nv">com</span>.<span class="nv">sock</span><span class="c1">;</span>
+    <span class="k">include</span>     <span class="nv">uwsgi_params</span><span class="c1">;</span>
+  }
 
-  <span class="nt">location</span> <span class="o">/</span><span class="nt">media</span><span class="o">/</span>  <span class="p">{</span>
-    <span class="err">alias</span> <span class="err">/home/USER/projects/mysite/media/</span><span class="p">;</span>
-  <span class="p">}</span>
+  <span class="nv">location</span> <span class="o">/</span><span class="nv">media</span><span class="o">/</span>  {
+    <span class="nv">alias</span> <span class="o">/</span><span class="nv">home</span><span class="o">/</span><span class="nv">USER</span><span class="o">/</span><span class="nv">projects</span><span class="o">/</span><span class="nv">mysite</span><span class="o">/</span><span class="nv">media</span><span class="o">/</span><span class="c1">;</span>
+  }
 
-  <span class="nt">location</span>  <span class="o">/</span><span class="nt">static</span><span class="o">/</span> <span class="p">{</span>
-    <span class="err">alias</span>  <span class="err">/home/USER/projects/mysite/static/</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="err">}</span>
+  <span class="nv">location</span>  <span class="o">/</span><span class="nv">static</span><span class="o">/</span> {
+    <span class="nv">alias</span>  <span class="o">/</span><span class="nv">home</span><span class="o">/</span><span class="nv">USER</span><span class="o">/</span><span class="nv">projects</span><span class="o">/</span><span class="nv">mysite</span><span class="o">/</span><span class="nv">static</span><span class="o">/</span><span class="c1">;</span>
+  }
+}
 </pre></div>
 
 
 <p>This is some basic Nginx configuration. For more, look at the <a href="http://nginx.org/en/docs/">Nginx documentation</a>.</p>
 <p>To activate it, you need to create a symbolic link for a file in <strong>/etc/nginx/sites-enabled/</strong>:</p>
-<div class="highlight"><pre><span></span>sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sites</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mysite</span><span class="p">.</span><span class="n">com</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sites</span><span class="o">-</span><span class="n">enabled</span><span class="o">/</span>
 </pre></div>
 
 
-<p>Configuration files for uWSGI are stored in <strong>/etc/uwsgi/apps-available</strong>. In this directory create new file called <strong>mysite.com.ini</strong>:</p>
-<div class="highlight"><pre><span></span>sudo nano /etc/uwsgi/apps-available/mysite.com.ini
+<p>Configuration files for uWSGI are stored in <strong>/etc/uwsgi/apps-available</strong>. In this directory create a new file called <strong>mysite.com.ini</strong>:</p>
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">/</span><span class="n">apps</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mysite</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="n">ini</span>
 </pre></div>
 
 
@@ -121,13 +121,13 @@ virtualenv venv
 
 
 <p>Enable it:</p>
-<div class="highlight"><pre><span></span>sudo ln-s /etc/uwsgi/apps-available/mysite.com.ini /etc/uwsgi/apps-enabled/
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ln</span><span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">/</span><span class="n">apps</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mysite</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="n">ini</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">/</span><span class="n">apps</span><span class="o">-</span><span class="n">enabled</span><span class="o">/</span>
 </pre></div>
 
 
-<p>And to the end, restart a services:</p>
-<div class="highlight"><pre><span></span>sudo service nginx restart
-sudo service uwsgi restart
+<p>And on the end, restart <em>nginx</em> and <em>uwsgi</em> services:</p>
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">nginx</span> <span class="k">restart</span>
+<span class="n">sudo</span> <span class="n">service</span> <span class="n">uwsgi</span> <span class="k">restart</span>
 </pre></div></p>
 
       <div class="article-tags">
