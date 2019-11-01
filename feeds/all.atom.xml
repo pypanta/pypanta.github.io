@@ -54,8 +54,8 @@ following command:&lt;/p&gt;
 
 
 &lt;blockquote&gt;
-&lt;p&gt;Note: We use &lt;code&gt;make altinstall&lt;/code&gt; instead of the &lt;code&gt;make install&lt;/code&gt; command, because
-we don't want to overwrite our system python installation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; We use &lt;code&gt;make altinstall&lt;/code&gt; instead of the &lt;code&gt;make install&lt;/code&gt; command,
+because we don't want to overwrite our system python installation.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The new Python executable will be installed in &lt;em&gt;/usr/local/bin&lt;/em&gt; directory. You
 can run it executing the &lt;code&gt;python3.8&lt;/code&gt; command in your terminal:&lt;/p&gt;
