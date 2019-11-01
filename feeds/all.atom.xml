@@ -54,7 +54,7 @@ following command:&lt;/p&gt;
 
 
 &lt;blockquote&gt;
-&lt;p&gt;We use the &lt;code&gt;make altinstall&lt;/code&gt; instead of the &lt;code&gt;make install&lt;/code&gt; command, because
+&lt;p&gt;Note: We use &lt;code&gt;make altinstall&lt;/code&gt; instead of the &lt;code&gt;make install&lt;/code&gt; command, because
 we don't want to overwrite our system python installation.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The new Python executable will be installed in &lt;em&gt;/usr/local/bin&lt;/em&gt; directory. You
