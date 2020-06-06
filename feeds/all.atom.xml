@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>PyPanta</title><link href="https://pypanta.github.io/" rel="alternate"></link><link href="https://pypanta.github.io/feeds/all.atom.xml" rel="self"></link><id>https://pypanta.github.io/</id><updated>2019-10-31T00:00:00+01:00</updated><entry><title>How to install Python from source on Debian GNU/Linux</title><link href="https://pypanta.github.io/how-to-install-python-from-source-on-debian-gnu-linux.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-10-31T00:00:00+01:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2019-10-31:/how-to-install-python-from-source-on-debian-gnu-linux.html</id><summary type="html">&lt;p&gt;The default Python 3 version on Debian is 3.7, and the latest Python release
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyPanta</title><link href="https://pypanta.github.io/" rel="alternate"></link><link href="https://pypanta.github.io/feeds/all.atom.xml" rel="self"></link><id>https://pypanta.github.io/</id><updated>2020-05-28T00:00:00+02:00</updated><entry><title>How to search files recursively in VIM</title><link href="https://pypanta.github.io/how-to-search-files-recursively-in-vim.html" rel="alternate"></link><published>2020-05-28T00:00:00+02:00</published><updated>2020-05-28T00:00:00+02:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2020-05-28:/how-to-search-files-recursively-in-vim.html</id><summary type="html">&lt;p&gt;In VIM, you can use the &lt;code&gt;find&lt;/code&gt; command to search for files in the current working
+directory path, this is by default. If you want to search in subdirectories
+also …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In VIM, you can use the &lt;code&gt;find&lt;/code&gt; command to search for files in the current working
+directory path, this is by default. If you want to search in subdirectories
+also, you need to add them in the searching path, for example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;myproject&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, the find command will also search files in the myproject directory, which
+is in your current working directory (directory where you started the Vim
+editor).&lt;/p&gt;
+&lt;p&gt;If you have other directories in your CWD, add them in the path
+separated with the comma, for example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;myproject&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;myotherprojectdir&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, the &lt;em&gt;find&lt;/em&gt; command will perform searching in both directories, but not in
+their subdirectories. For searching files in subdirectories, you can add them
+in the path like in the examples above, or you can use &lt;em&gt;glob&lt;/em&gt; character instead
+of their names, for example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;+=**&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, the &lt;em&gt;find&lt;/em&gt; command will perform searching in all directories and
+subdirectories in your CWD path.&lt;/p&gt;
+&lt;p&gt;Also, you must enter the full file name including the file extension, because
+VIM find command does not support filename expansion with glob characters like
+are * and ?, or regular expressions. But, you can set the &lt;code&gt;wildmenu&lt;/code&gt; for
+&lt;strong&gt;TAB&lt;/strong&gt; completion, so when you enter the first couple of characters of the
+file name, and then press the &lt;em&gt;TAB&lt;/em&gt;, all the files whose names starts with the
+entered characters will be listed at the bottom of the VIM window. Then use the
+&lt;em&gt;TAB&lt;/em&gt; to circle between them, and press the &lt;strong&gt;ENTER&lt;/strong&gt; when you find the right
+one.&lt;/p&gt;
+&lt;p&gt;You can set wildmenu with &lt;code&gt;:set wildmenu&lt;/code&gt; or &lt;code&gt;:set wmnu&lt;/code&gt; commad in the VIM
+command line.&lt;/p&gt;</content><category term="VIM"></category><category term="vim"></category><category term="vi"></category></entry><entry><title>How to install Python from source on Debian GNU/Linux</title><link href="https://pypanta.github.io/how-to-install-python-from-source-on-debian-gnu-linux.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-10-31T00:00:00+01:00</updated><author><name>Panta</name></author><id>tag:pypanta.github.io,2019-10-31:/how-to-install-python-from-source-on-debian-gnu-linux.html</id><summary type="html">&lt;p&gt;The default Python 3 version on Debian is 3.7, and the latest Python release
 is 3.8.&lt;/p&gt;
 &lt;p&gt;To install the latest Python version, you need to compile it from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The default Python 3 version on Debian is 3.7, and the latest Python release
 is 3.8.&lt;/p&gt;

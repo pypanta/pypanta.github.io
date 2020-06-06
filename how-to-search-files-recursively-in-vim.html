@@ -4,7 +4,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>How to remove items from Places sidebar in Nautilus file manager?</title>
+  <title>How to search files recursively in VIM</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pypanta.github.io/theme/css/pygment.css"/>
   <link rel="stylesheet" href="https://pypanta.github.io/theme/css/style.css"/>
@@ -33,31 +33,52 @@
   <section class="content">
 <article>
   <div class="article-info-detail">
-    <h2>How to remove items from Places sidebar in Nautilus file manager?</h2>
-    <small>Posted on: <time datetime="2014-07-06T00:00:00+02:00">06 07 2014</time>
-      by Panta in <a href="https://pypanta.github.io/category/linux.html">Linux</a></small>
+    <h2>How to search files recursively in VIM</h2>
+    <small>Posted on: <time datetime="2020-05-28T00:00:00+02:00">28 05 2020</time>
+      by Panta in <a href="https://pypanta.github.io/category/vim.html">VIM</a></small>
   </div>
   <div class="article-content-detail">
-    <p><p>To remove items from places sidebar in Nautilus, open the <strong>~/.config/user-dirs.dirs</strong> file and remove lines that refer to items you don't want.</p>
-<div class="highlight"><pre><span></span><span class="n">XDG_DESKTOP_DIR</span><span class="o">=</span><span class="ss">&quot;$HOME/Desktop&quot;</span>
-<span class="n">XDG_DOWNLOAD_DIR</span><span class="o">=</span><span class="ss">&quot;$HOME/Downloads&quot;</span>
-<span class="n">XDG_PUBLICSHARE_DIR</span><span class="o">=</span><span class="ss">&quot;$HOME/Public&quot;</span>
-<span class="n">XDG_DOCUMENTS_DIR</span><span class="o">=</span><span class="ss">&quot;$HOME/Documents&quot;</span>
-<span class="n">XDG_MUSIC_DIR</span><span class="o">=</span><span class="ss">&quot;$HOME/Music&quot;</span>
-<span class="n">XDG_VIDEOS_DIR</span><span class="o">=</span><span class="ss">&quot;$HOME/Videos&quot;</span>
-<span class="n">XDG_PICTURES_DIR</span><span class="o">=</span><span class="ss">&quot;$HOME/Pictures&quot;</span>
+    <p><p>In VIM, you can use the <code>find</code> command to search for files in the current working
+directory path, this is by default. If you want to search in subdirectories
+also, you need to add them in the searching path, for example:</p>
+<div class="highlight"><pre><span></span><span class="p">:</span><span class="k">set</span> <span class="n">path</span><span class="o">+=</span><span class="n">myproject</span>
 </pre></div>
 
 
-<p>To make these changes permanent, run the following command in your terminal:</p>
-<div class="highlight"><pre><span></span><span class="n">echo</span> <span class="ss">&quot;enabled=false&quot;</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="p">.</span><span class="n">config</span><span class="o">/</span><span class="k">user</span><span class="o">-</span><span class="n">dirs</span><span class="p">.</span><span class="n">conf</span>
-</pre></div></p>
+<p>Now, the find command will also search files in the myproject directory, which
+is in your current working directory (directory where you started the Vim
+editor).</p>
+<p>If you have other directories in your CWD, add them in the path
+separated with the comma, for example:</p>
+<div class="highlight"><pre><span></span><span class="p">:</span><span class="k">set</span> <span class="n">path</span><span class="o">+=</span><span class="n">myproject</span><span class="p">,</span><span class="n">myotherprojectdir</span>
+</pre></div>
+
+
+<p>Now, the <em>find</em> command will perform searching in both directories, but not in
+their subdirectories. For searching files in subdirectories, you can add them
+in the path like in the examples above, or you can use <em>glob</em> character instead
+of their names, for example:</p>
+<div class="highlight"><pre><span></span><span class="p">:</span><span class="k">set</span> <span class="n">path</span><span class="o">+=**</span><span class="cm">/*</span>
+</pre></div>
+
+
+<p>Now, the <em>find</em> command will perform searching in all directories and
+subdirectories in your CWD path.</p>
+<p>Also, you must enter the full file name including the file extension, because
+VIM find command does not support filename expansion with glob characters like
+are * and ?, or regular expressions. But, you can set the <code>wildmenu</code> for
+<strong>TAB</strong> completion, so when you enter the first couple of characters of the
+file name, and then press the <em>TAB</em>, all the files whose names starts with the
+entered characters will be listed at the bottom of the VIM window. Then use the
+<em>TAB</em> to circle between them, and press the <strong>ENTER</strong> when you find the right
+one.</p>
+<p>You can set wildmenu with <code>:set wildmenu</code> or <code>:set wmnu</code> commad in the VIM
+command line.</p></p>
 
       <div class="article-tags">
         <i class="fas fa-tags"></i>
-          <small><a href="https://pypanta.github.io/tag/nautilus.html" rel="tag">Nautilus</a></small>
-          <small><a href="https://pypanta.github.io/tag/gnome.html" rel="tag">Gnome</a></small>
-          <small><a href="https://pypanta.github.io/tag/linux.html" rel="tag">Linux</a></small>
+          <small><a href="https://pypanta.github.io/tag/vim.html" rel="tag">vim</a></small>
+          <small><a href="https://pypanta.github.io/tag/vi.html" rel="tag">vi</a></small>
       </div>
 
     <!-- DISQUS Comments -->
@@ -95,12 +116,12 @@
             </li>
       </ul>
       <ul class="unstyled-list">
-            <li class="active">
+            <li >
               <a href="https://pypanta.github.io/category/linux.html" title="Linux">Linux</a>
             </li>
       </ul>
       <ul class="unstyled-list">
-            <li >
+            <li class="active">
               <a href="https://pypanta.github.io/category/vim.html" title="VIM">VIM</a>
             </li>
       </ul>
