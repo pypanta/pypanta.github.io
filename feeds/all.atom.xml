@@ -31,7 +31,7 @@ subdirectories in your CWD path.&lt;/p&gt;
 VIM find command does not support filename expansion with glob characters like
 are * and ?, or regular expressions. But, you can set the &lt;code&gt;wildmenu&lt;/code&gt; for
 &lt;strong&gt;TAB&lt;/strong&gt; completion, so when you enter the first couple of characters of the
-file name, and then press the &lt;em&gt;TAB&lt;/em&gt;, all the files whose names starts with the
+file name, and then press the &lt;em&gt;TAB&lt;/em&gt;, all files whose names begin with the
 entered characters will be listed at the bottom of the VIM window. Then use the
 &lt;em&gt;TAB&lt;/em&gt; to circle between them, and press the &lt;strong&gt;ENTER&lt;/strong&gt; when you find the right
 one.&lt;/p&gt;
