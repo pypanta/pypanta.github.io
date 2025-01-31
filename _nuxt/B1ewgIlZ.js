@@ -1,0 +1,1 @@
+import{W as n,r as s}from"./B-YT2MGI.js";const c=n("messageStore",()=>{const t=s(""),a=s(""),e=s(!1);function o(r,u,l=""){t.value=u,a.value=l,e.value=!0,setTimeout(()=>{e.value=!1},r)}return{message:t,classes:a,isVisible:e,showAlert:o}});export{c as u};

@@ -1,0 +1,1 @@
+function p(e){return{type:"root",children:e.value.map(r)}}function r(e){if(typeof e=="string")return{type:"text",value:e};const[t,n,...o]=e;return{type:"element",tag:t,props:n,children:o.map(r)}}export{p as d};

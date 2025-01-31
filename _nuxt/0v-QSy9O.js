@@ -1,0 +1,1 @@
+function r(i,f,e){for(const n of i){if(n.id===f){e(n);return}n.replies.length&&r(n.replies,f,e)}}function t(i,f){for(let e=0;e<i.length;e++){if(i[e].id===f){i.splice(e,1);return}i[e].replies.length&&t(i[e].replies,f)}}export{t as a,r as f};
